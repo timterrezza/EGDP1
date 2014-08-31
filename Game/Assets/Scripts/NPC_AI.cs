@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Basic_Enemy : MonoBehaviour {
+public class NPC_AI : MonoBehaviour {
 
 	public float speed = 1.0f;
 

@@ -46,9 +46,11 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Basic_Enemy.cs" />
-     <Compile Include="Assets\Scripts\Despawn_Bad.cs" />
+     <Compile Include="Assets\Scripts\Despawn_NPC.cs" />
+     <Compile Include="Assets\Scripts\NPC_AI.cs" />
      <Compile Include="Assets\Scripts\Player_Movement.cs" />
+     <Compile Include="Assets\Scripts\Score_Code.cs" />
+     <Compile Include="Assets\Scripts\Timer_Code.cs" />
      <Compile Include="Assets\Scripts\projectileMovement.cs" />
      <Compile Include="Assets\Scripts\projectileSpawner.cs" />
  <Reference Include="Assembly-UnityScript-firstpass">
