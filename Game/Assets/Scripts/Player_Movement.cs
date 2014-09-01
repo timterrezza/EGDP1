@@ -14,7 +14,9 @@ public class Player_Movement : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if(foo.gameOver == false)	{
+		GameObject foo = GameObject.Find("spawnMaster");
+		projectileSpawner spawner = foo.GetComponent<projectileSpawner>();
+		if(spawner.gameOver == false)	{
 		 	if(Input.GetKey (KeyCode.W)){
 				if (transform.position.y < max_y) {
 					transform.position += new Vector3(0,1 * Time.deltaTime * speed,0);
