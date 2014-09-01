@@ -6,7 +6,7 @@ public class Despawn_NPC : MonoBehaviour {
 
 	private void OnCollisionEnter(Collision c) 
 	{
-		if(c.gameObject.name == "Bad Thing") {
+		if(c.gameObject.tag == "bad") {
 			Destroy(c.gameObject);
 			GameObject score = GameObject.Find("Score");
 			Score_Code foo = score.GetComponent<Score_Code>();
@@ -14,7 +14,7 @@ public class Despawn_NPC : MonoBehaviour {
 			if(foo.score < 0)
 				foo.score = 0;
 		}
-		if(c.gameObject.name == "Good Thing")	{
+		if(c.gameObject.tag == "good")	{
 			Destroy (c.gameObject);
 			GameObject score = GameObject.Find("Score");
 			Score_Code foo = score.GetComponent<Score_Code>();

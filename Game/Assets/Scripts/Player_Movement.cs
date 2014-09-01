@@ -16,9 +16,6 @@ public class Player_Movement : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		player = GameObject.Find("Player");
-		Debug.Log ("X: " + player.transform.position.x);
-		Debug.Log ("Y: " + player.transform.position.y);
 	 	if(Input.GetKey (KeyCode.W))	{
 			transform.position += new Vector3(0,1 * Time.deltaTime * speed,0);
 		}
