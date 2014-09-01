@@ -14,26 +14,24 @@ public class Player_Movement : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if(foo.gameOver == false)	{
-		 	if(Input.GetKey (KeyCode.W)){
-				if (transform.position.y < max_y) {
-					transform.position += new Vector3(0,1 * Time.deltaTime * speed,0);
-				}
+	 	if(Input.GetKey (KeyCode.W)){
+			if (transform.position.y < max_y) {
+				transform.position += new Vector3(0,1 * Time.deltaTime * speed,0);
 			}
-			if(Input.GetKey (KeyCode.A)){
-				if (transform.position.x > min_x) {
-					transform.position += new Vector3(-1 * Time.deltaTime * speed,0,0);
-				}
+		}
+		if(Input.GetKey (KeyCode.A)){
+			if (transform.position.x > min_x) {
+				transform.position += new Vector3(-1 * Time.deltaTime * speed,0,0);
 			}
-			if(Input.GetKey (KeyCode.S)){
-				if (transform.position.y > min_y) {
-					transform.position += new Vector3(0,-1 * Time.deltaTime * speed,0);
-				}
+		}
+		if(Input.GetKey (KeyCode.S)){
+			if (transform.position.y > min_y) {
+				transform.position += new Vector3(0,-1 * Time.deltaTime * speed,0);
 			}
-			if(Input.GetKey (KeyCode.D)){
-				if (transform.position.x < max_x) {
-					transform.position += new Vector3(1 * Time.deltaTime * speed,0,0);
-				}
+		}
+		if(Input.GetKey (KeyCode.D)){
+			if (transform.position.x < max_x) {
+				transform.position += new Vector3(1 * Time.deltaTime * speed,0,0);
 			}
 		}
 	}
