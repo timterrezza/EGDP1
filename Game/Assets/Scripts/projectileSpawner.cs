@@ -8,12 +8,17 @@ public class projectileSpawner : MonoBehaviour {
 	GameObject[] projectiles;
 	public bool gameOver;
 	Object projectile;
+	bool teacherSpawn;
+	int teacherChance;
+	GameObject teacher;
 	// Use this for initialization
 	void Start () {
+		teacher = GameObject.Find("teacher");
 		gameOver = false;
 		spawnPoints = GameObject.FindGameObjectsWithTag("spawnPoint");
 		timer = 0;
 		timeBetweenSpawns = 2.5f;
+		teacherSpawn = false;
 	}
 	
 	// Update is called once per frame
@@ -34,8 +39,19 @@ public class projectileSpawner : MonoBehaviour {
 						projectile = Resources.Load("Prefabs/badProjectile");
 					}
 				}
-				Instantiate(projectile, new Vector3(spawnPoints[spawnIndex].gameObject.transform.localPosition.x, spawnPoints[spawnIndex].gameObject.transform.localPosition.y,-0.1f),Quaternion.identity);
+				teacherChance = Random.Range(0, 4);
+				if (teacherChance == 0) {
+					teacherSpawn = true;
+					projectile = Resources.Load("Prefabs/goodProjectile");
+				}
+				if (teacherSpawn) {
+					Instantiate(projectile, new Vector3(teacher.gameObject.transform.localPosition.x, teacher.gameObject.transform.localPosition.y,-0.1f),Quaternion.identity);
+				}
+				else {
+					Instantiate(projectile, new Vector3(spawnPoints[spawnIndex].gameObject.transform.localPosition.x, spawnPoints[spawnIndex].gameObject.transform.localPosition.y,-0.1f),Quaternion.identity);
+				}
 				timer = 0;
+				teacherSpawn = false;
 			}
 		}
 	}

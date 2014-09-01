@@ -14,6 +14,7 @@ public class Player_Movement : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+<<<<<<< HEAD
 		GameObject foo = GameObject.Find("spawnMaster");
 		projectileSpawner spawner = foo.GetComponent<projectileSpawner>();
 		if(spawner.gameOver == false)	{
@@ -21,21 +22,26 @@ public class Player_Movement : MonoBehaviour {
 				if (transform.position.y < max_y) {
 					transform.position += new Vector3(0,1 * Time.deltaTime * speed,0);
 				}
+=======
+	 	if(Input.GetKey (KeyCode.W)){
+			if (transform.position.y < max_y) {
+				transform.position += new Vector3(0,1 * Time.deltaTime * speed,0);
+>>>>>>> b3ba28517fb5bc6011188e1406181205225bd680
 			}
-			if(Input.GetKey (KeyCode.A)){
-				if (transform.position.x > min_x) {
-					transform.position += new Vector3(-1 * Time.deltaTime * speed,0,0);
-				}
+		}
+		if(Input.GetKey (KeyCode.A)){
+			if (transform.position.x > min_x) {
+				transform.position += new Vector3(-1 * Time.deltaTime * speed,0,0);
 			}
-			if(Input.GetKey (KeyCode.S)){
-				if (transform.position.y > min_y) {
-					transform.position += new Vector3(0,-1 * Time.deltaTime * speed,0);
-				}
+		}
+		if(Input.GetKey (KeyCode.S)){
+			if (transform.position.y > min_y) {
+				transform.position += new Vector3(0,-1 * Time.deltaTime * speed,0);
 			}
-			if(Input.GetKey (KeyCode.D)){
-				if (transform.position.x < max_x) {
-					transform.position += new Vector3(1 * Time.deltaTime * speed,0,0);
-				}
+		}
+		if(Input.GetKey (KeyCode.D)){
+			if (transform.position.x < max_x) {
+				transform.position += new Vector3(1 * Time.deltaTime * speed,0,0);
 			}
 		}
 	}
