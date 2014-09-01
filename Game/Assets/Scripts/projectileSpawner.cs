@@ -2,14 +2,16 @@
 using System.Collections;
 
 public class projectileSpawner : MonoBehaviour {
-	GameObject[] spawnPoints;
 	float timer;
+	float teacherTimer;
 	float timeBetweenSpawns;
+	float teacherTimeBetweenSpawns;
+
+	GameObject[] spawnPoints;
 	GameObject[] projectiles;
+
 	public bool gameOver;
 	Object projectile;
-	bool teacherSpawn;
-	int teacherChance;
 	GameObject teacher;
 	// Use this for initialization
 	void Start () {
@@ -18,13 +20,15 @@ public class projectileSpawner : MonoBehaviour {
 		spawnPoints = GameObject.FindGameObjectsWithTag("spawnPoint");
 		timer = 0;
 		timeBetweenSpawns = 2.5f;
-		teacherSpawn = false;
+		teacherTimer = 0;
+		teacherTimeBetweenSpawns = 3.5f;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (!gameOver) {
 			timer += Time.deltaTime;
+			teacherTimer += Time.deltaTime;
 			if (timer > timeBetweenSpawns) {
 				int spawnIndex = Random.Range(0, spawnPoints.Length);
 				if (spawnPoints[spawnIndex].name == "teacher") {
@@ -39,19 +43,13 @@ public class projectileSpawner : MonoBehaviour {
 						projectile = Resources.Load("Prefabs/badProjectile");
 					}
 				}
-				teacherChance = Random.Range(0, 4);
-				if (teacherChance == 0) {
-					teacherSpawn = true;
-					projectile = Resources.Load("Prefabs/goodProjectile");
-				}
-				if (teacherSpawn) {
-					Instantiate(projectile, new Vector3(teacher.gameObject.transform.localPosition.x, teacher.gameObject.transform.localPosition.y,-0.1f),Quaternion.identity);
-				}
-				else {
-					Instantiate(projectile, new Vector3(spawnPoints[spawnIndex].gameObject.transform.localPosition.x, spawnPoints[spawnIndex].gameObject.transform.localPosition.y,-0.1f),Quaternion.identity);
-				}
+				Instantiate(projectile, new Vector3(spawnPoints[spawnIndex].gameObject.transform.localPosition.x, spawnPoints[spawnIndex].gameObject.transform.localPosition.y,-0.1f),Quaternion.identity);
 				timer = 0;
-				teacherSpawn = false;
+			}
+			if (teacherTimer > teacherTimeBetweenSpawns) {
+				projectile = Resources.Load("Prefabs/goodProjectile");
+				Instantiate(projectile, new Vector3(teacher.gameObject.transform.localPosition.x, teacher.gameObject.transform.localPosition.y,-0.1f),Quaternion.identity);
+				teacherTimer = 0;
 			}
 		}
 	}

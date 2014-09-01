@@ -17,14 +17,16 @@ public class teacherMovement : MonoBehaviour {
 		timer += Time.deltaTime;
 		if (timer > timeBetweenMovements) {
 			timer = 0;
-			timeBetweenMovements = Random.Range(2,4);
+			timeBetweenMovements = Random.Range(1,5);
 			xspeed = -xspeed;
 		}
 		if (transform.position.x > 9.5) {
 			xspeed = -0.1f;
+			timer = 0;
 		}
 		if (transform.position.x < -9.5) {
 			xspeed = 0.1f;
+			timer = 0;
 		}
 		transform.localPosition += new Vector3(xspeed, 0);
 	}
