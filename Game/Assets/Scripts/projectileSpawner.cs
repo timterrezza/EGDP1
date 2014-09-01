@@ -21,7 +21,7 @@ public class projectileSpawner : MonoBehaviour {
 			timer += Time.deltaTime;
 			if (timer > timeBetweenSpawns) {
 				int spawnIndex = Random.Range(0, spawnPoints.Length);
-				Object projectile = Resources.Load("Prefabs/projectile");
+				Object projectile = Resources.Load("Prefabs/badProjectile");
 				Instantiate(projectile, spawnPoints[spawnIndex].gameObject.transform.position, Quaternion.identity);
 				timer = 0;
 			}
