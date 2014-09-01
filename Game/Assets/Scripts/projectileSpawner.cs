@@ -2,11 +2,12 @@
 using System.Collections;
 
 public class projectileSpawner : MonoBehaviour {
-	public GameObject[] spawnPoints;
-	public float timer;
-	public float timeBetweenSpawns;
-	public GameObject[] projectiles;
+	GameObject[] spawnPoints;
+	float timer;
+	float timeBetweenSpawns;
+	GameObject[] projectiles;
 	public bool gameOver;
+	Object projectile;
 	// Use this for initialization
 	void Start () {
 		gameOver = false;
@@ -21,8 +22,19 @@ public class projectileSpawner : MonoBehaviour {
 			timer += Time.deltaTime;
 			if (timer > timeBetweenSpawns) {
 				int spawnIndex = Random.Range(0, spawnPoints.Length);
-				Object projectile = Resources.Load("Prefabs/badProjectile");
-				Instantiate(projectile, spawnPoints[spawnIndex].gameObject.transform.position, Quaternion.identity);
+				if (spawnPoints[spawnIndex].name == "teacher") {
+					projectile = Resources.Load("Prefabs/goodProjectile");
+				}
+				else {
+					int goodChance = Random.Range (0, 7);
+					if (goodChance == 0) {
+						projectile = Resources.Load("Prefabs/goodProjectile");
+					}
+					else {
+						projectile = Resources.Load("Prefabs/badProjectile");
+					}
+				}
+				Instantiate(projectile, new Vector3(spawnPoints[spawnIndex].gameObject.transform.localPosition.x, spawnPoints[spawnIndex].gameObject.transform.localPosition.y,-0.1f),Quaternion.identity);
 				timer = 0;
 			}
 		}
