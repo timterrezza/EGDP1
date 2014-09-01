@@ -3,32 +3,34 @@ using System.Collections;
 
 public class Player_Movement : MonoBehaviour {
 
-
+	public GameObject player;
 	public float speed = 4.0f;
 
-	public float max_x = 6.3680293f;
-	public float min_x = -6.646746f;
+	public float max_x = 9.7f;
+	public float min_x = -9.5f;
 
-	public float max_z = -2.0f;
-	public float min_z = -6.754216f;
+	public float max_y = -6f;
+	public float min_y = -9.5f;
 
 
 
 	// Update is called once per frame
 	void Update () {
-
+		player = GameObject.Find("Player");
+		Debug.Log ("X: " + player.transform.position.x);
+		Debug.Log ("Y: " + player.transform.position.y);
 	 	if(Input.GetKey (KeyCode.W))	{
-			transform.position += Vector3.forward * Time.deltaTime * speed;
+			transform.position += new Vector3(0,1 * Time.deltaTime * speed,0);
 		}
 
 		if(Input.GetKey (KeyCode.A))	{
-			transform.position += Vector3.left * Time.deltaTime * speed;
+			transform.position += new Vector3(-1 * Time.deltaTime * speed,0,0);
 		}
 		if(Input.GetKey (KeyCode.S))	{
-			transform.position += Vector3.back * Time.deltaTime * speed;
+			transform.position += new Vector3(0,-1 * Time.deltaTime * speed,0);
 		}
 		if(Input.GetKey (KeyCode.D))	{
-			transform.position += Vector3.right * Time.deltaTime * speed;
+			transform.position += new Vector3(1 * Time.deltaTime * speed,0,0);
 		}
 	}
 
