@@ -26,7 +26,7 @@ public class projectileSpawner : MonoBehaviour {
 					projectile = Resources.Load("Prefabs/goodProjectile");
 				}
 				else {
-					int goodChance = Random.Range (0, 7);
+					int goodChance = Random.Range (0, 5);
 					if (goodChance == 0) {
 						projectile = Resources.Load("Prefabs/goodProjectile");
 					}
