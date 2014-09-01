@@ -21,8 +21,10 @@ public class Grading : MonoBehaviour {
 			guiText.text = "Grade: C!";
 		else if(foo.score > 59)
 			guiText.text = "Grade: D!";
-		else
+		else {
 			guiText.text = "Grade: F! Boooooo.";
+			audio.Play ();
+		}
 
 	}
 }
