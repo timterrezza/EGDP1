@@ -2,7 +2,6 @@
 using System.Collections;
 
 public class Grading : MonoBehaviour {
-	
 
 	// Update is called once per frame
 	void Update () {
@@ -28,7 +27,7 @@ public class Grading : MonoBehaviour {
 				guiText.text = "Grade: D!";
 			else {
 				guiText.text = "Grade: F! Boooooo.";
-				audio.Play ();
+				audio.Play();
 			}
 		}
 
