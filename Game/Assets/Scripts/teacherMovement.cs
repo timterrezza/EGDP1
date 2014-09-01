@@ -14,18 +14,23 @@ public class teacherMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		timer += Time.deltaTime;
-		if (timer > timeBetweenMovements) {
-			timer = 0;
-			timeBetweenMovements = Random.Range(2,4);
-			xspeed = -xspeed;
+		GameObject foo = GameObject.Find("spawnMaster");
+		projectileSpawner spawner = foo.GetComponent<projectileSpawner>();
+
+		if(spawner.gameOver == false)	{
+			timer += Time.deltaTime;
+			if (timer > timeBetweenMovements) {
+				timer = 0;
+				timeBetweenMovements = Random.Range(2,4);
+				xspeed = -xspeed;
+			}
+			if (transform.position.x > 9.5) {
+				xspeed = -0.1f;
+			}
+			if (transform.position.x < -9.5) {
+				xspeed = 0.1f;
+			}
+			transform.localPosition += new Vector3(xspeed, 0);
 		}
-		if (transform.position.x > 9.5) {
-			xspeed = -0.1f;
-		}
-		if (transform.position.x < -9.5) {
-			xspeed = 0.1f;
-		}
-		transform.localPosition += new Vector3(xspeed, 0);
 	}
 }
