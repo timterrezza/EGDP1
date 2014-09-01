@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\Timer_Code.cs" />
      <Compile Include="Assets\Scripts\projectileMovement.cs" />
      <Compile Include="Assets\Scripts\projectileSpawner.cs" />
+     <Compile Include="Assets\Scripts\teacherMovement.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">

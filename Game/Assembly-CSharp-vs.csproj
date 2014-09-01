@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\Timer_Code.cs" />
      <Compile Include="Assets\Scripts\projectileMovement.cs" />
      <Compile Include="Assets\Scripts\projectileSpawner.cs" />
+     <Compile Include="Assets\Scripts\teacherMovement.cs" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>

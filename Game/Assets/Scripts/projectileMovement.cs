@@ -25,6 +25,9 @@ public class projectileMovement : MonoBehaviour {
 			transform.localPosition += new Vector3(2f * speed * Mathf.Cos(radians), -1f * speed, 0f);
 			radians += 0.1f;
 		}
+		if (transform.localPosition.y < -15) {
+			Destroy(gameObject);
+		}
 
 	}
 }
