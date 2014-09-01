@@ -11,11 +11,15 @@ public class Timer_Code : MonoBehaviour {
 	}
 
 	void Update () {
+		GameObject foo = GameObject.Find("spawnMaster");
+		projectileSpawner spawner = foo.GetComponent<projectileSpawner>();
+
 		if(time_limit > 0)
 			guiText.text = time_limit + " Seconds left";
-		else
-			guiText.text = "TIME'S UP!";
-
+		else {
+				spawner.gameOver = true;
+				guiText.text = "TIME'S UP!";
+		}
 
 		//End of Game
 		if(time_limit <= 0 && game_over == false)	{

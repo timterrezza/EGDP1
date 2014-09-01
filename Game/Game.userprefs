@@ -1,4 +1,13 @@
 ﻿<Properties>
+<<<<<<< HEAD
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player_Movement.cs">
+    <Files>
+      <File FileName="Assets\Scripts\projectileSpawner.cs" Line="43" Column="1" />
+      <File FileName="Assets\Scripts\projectileSpawner.cs" Line="9" Column="16" />
+      <File FileName="Assets\Scripts\Player_Movement.cs" Line="17" Column="27" />
+      <File FileName="Assets\Scripts\Despawn_NPC.cs" Line="11" Column="48" />
+=======
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\projectileSpawner.cs">
     <Files>
@@ -6,13 +15,14 @@
       <File FileName="Assets\Scripts\projectileMovement.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\teacherMovement.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\projectileSpawner.cs" Line="45" Column="60" />
+>>>>>>> b3ba28517fb5bc6011188e1406181205225bd680
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="Assembly-CSharp" expanded="True">
             <Node name="Scripts" expanded="True">
-              <Node name="projectileSpawner.cs" selected="True" />
+              <Node name="Player_Movement.cs" selected="True" />
             </Node>
           </Node>
         </State>
