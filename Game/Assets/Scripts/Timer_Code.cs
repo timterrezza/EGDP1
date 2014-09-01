@@ -20,7 +20,6 @@ public class Timer_Code : MonoBehaviour {
 		//End of Game
 		if(time_limit <= 0 && game_over == false)	{
 			CancelInvoke();
-			Debug.Log("GAME OVER");
 			game_over = true;
 		}
 
@@ -28,7 +27,6 @@ public class Timer_Code : MonoBehaviour {
 
 	void timeDecrease()	{
 		time_limit--;
-		Debug.Log (time_limit);
 	}
 
 }

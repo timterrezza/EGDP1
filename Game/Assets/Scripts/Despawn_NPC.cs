@@ -11,6 +11,8 @@ public class Despawn_NPC : MonoBehaviour {
 			GameObject score = GameObject.Find("Score");
 			Score_Code foo = score.GetComponent<Score_Code>();
 			foo.score -= 5;
+			if(foo.score < 0)
+				foo.score = 0;
 		}
 		if(c.gameObject.name == "Good Thing")	{
 			Destroy (c.gameObject);
