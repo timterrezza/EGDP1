@@ -2,11 +2,14 @@
 using System.Collections;
 
 public class Grading : MonoBehaviour {
+	
+	bool sound_played = false;
 
 	// Update is called once per frame
 	void Update () {
 		GameObject derp = GameObject.Find("spawnMaster");
 		projectileSpawner spawner = derp.GetComponent<projectileSpawner>();
+
 
 		if(spawner.gameOver == false)
 			guiText.text = "";
@@ -27,7 +30,10 @@ public class Grading : MonoBehaviour {
 				guiText.text = "Grade: D!";
 			else {
 				guiText.text = "Grade: F! Boooooo.";
-				audio.Play();
+				if(sound_played == false)	{
+					audio.Play();
+					sound_played = true;
+				}
 			}
 		}
 
