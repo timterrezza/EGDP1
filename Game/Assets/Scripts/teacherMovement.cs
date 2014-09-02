@@ -28,6 +28,10 @@ public class teacherMovement : MonoBehaviour {
 				xspeed = -0.1f;
 				timer = 0;
 			}
+			if (transform.position.x < -9.5) {
+				xspeed = 0.1f;
+				timer = 0;
+			}
 			transform.localPosition += new Vector3(xspeed, 0);
 		}
 	}
