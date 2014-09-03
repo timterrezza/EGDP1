@@ -17,6 +17,9 @@ public class Player_Movement : MonoBehaviour {
 		GameObject foo = GameObject.Find("spawnMaster");
 		projectileSpawner spawner = foo.GetComponent<projectileSpawner>();
 
+		if(Input.GetKeyDown("escape"))
+			Application.Quit();
+
 		if(spawner.gameOver == false)	{
 		 	if(Input.GetKey (KeyCode.W)){
 				if (transform.position.y < max_y) {
