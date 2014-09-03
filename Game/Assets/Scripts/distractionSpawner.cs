@@ -18,7 +18,7 @@ public class distractionSpawner : MonoBehaviour {
 	void Update () {
 		timer += Time.deltaTime;
 		if (timer > timeBetweenSpawns) {
-			Instantiate (distraction, new Vector3(-12f, 12f, -10f), Quaternion.identity);
+			Instantiate (distraction, new Vector3(-14f, 12f, -10f), Quaternion.Euler(0,0,45f));
 			timer = 0;
 		}
 	}
