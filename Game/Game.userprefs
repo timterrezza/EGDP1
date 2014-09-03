@@ -1,17 +1,8 @@
 ﻿<Properties>
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\distractionMovement.cs">
-    <Files>
-      <File FileName="Assets\Scripts\distractionSpawner.cs" Line="26" Column="1" />
-      <File FileName="Assets\Scripts\distractionMovement.cs" Line="25" Column="1" />
-      <File FileName="Assets\Scripts\projectileMovement.cs" Line="46" Column="3" />
-=======
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\distractionSpawner.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\projectileSpawner.cs">
     <Files>
-      <File FileName="Assets\Scripts\distractionSpawner.cs" Line="21" Column="45" />
->>>>>>> ca92ec481c272f361b0d1e8f9686310e2e4860e2
+      <File FileName="Assets\Scripts\projectileSpawner.cs" Line="36" Column="25" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
