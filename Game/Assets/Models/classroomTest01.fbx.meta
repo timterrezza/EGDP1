@@ -22,6 +22,7 @@ ModelImporter:
     100032: chairs03
     100034: desks02
     100036: landing01
+    100038: laptop02
     400000: ascendingFloor01
     400002: chairs01
     400004: chalkboard01
@@ -41,6 +42,7 @@ ModelImporter:
     400032: chairs03
     400034: desks02
     400036: landing01
+    400038: laptop02
     2300000: ascendingFloor01
     2300002: chairs01
     2300004: chalkboard01
@@ -56,6 +58,7 @@ ModelImporter:
     2300024: chairs03
     2300026: desks02
     2300028: landing01
+    2300030: laptop02
     3300000: ascendingFloor01
     3300002: chairs01
     3300004: chalkboard01
@@ -71,6 +74,7 @@ ModelImporter:
     3300024: chairs03
     3300026: desks02
     3300028: landing01
+    3300030: laptop02
     4300000: podium01
     4300002: table01
     4300004: laptop01
@@ -86,6 +90,7 @@ ModelImporter:
     4300024: landing01
     4300026: chairs03
     4300028: desks02
+    4300030: laptop02
     9500000: //RootNode
   materials:
     importMaterials: 1
