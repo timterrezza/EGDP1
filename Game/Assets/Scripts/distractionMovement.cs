@@ -15,5 +15,10 @@ public class distractionMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		transform.localPosition += new Vector3(xSpeed,ySpeed);
+
+		if (transform.localPosition.y < -15) {
+			Destroy(gameObject);
+		}
+
 	}
 }
